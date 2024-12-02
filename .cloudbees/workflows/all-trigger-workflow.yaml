@@ -1,0 +1,30 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: all-trigger-workflow
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "**"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        default: Yoga
+        description: display name
+      version:
+        type: string
+        default: 1.0.1
+        description: version number
+jobs:
+  build:
+    steps:
+      - name: Say hello
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          echo "hello world"
