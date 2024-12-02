@@ -28,4 +28,4 @@ jobs:
         shell: sh
         run: |
           echo "hello world branch run"
-          echo "Application name ${input.name} and version ${input.version}"
+          echo "Application name ${inputs.name} and version ${inputs.version}"
