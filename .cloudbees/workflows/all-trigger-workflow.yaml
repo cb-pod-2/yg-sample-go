@@ -27,5 +27,5 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello world branch run"
+          echo "hello world branch run - update test"
           echo "Application name \"${{ vars.name }}\" and version ${{ cloudbees.version }}"
