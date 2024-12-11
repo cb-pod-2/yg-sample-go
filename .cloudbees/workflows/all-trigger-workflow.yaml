@@ -20,6 +20,10 @@ on:
         type: string
         default: 1.0.1
         description: version number
+      appname:
+        type: string
+        required: true
+        description: app name
 jobs:
   build:
     steps:
