@@ -28,5 +28,5 @@ jobs:
         shell: sh
         run: |
           echo "hello world branch run - update test"
-          sleep(12)
+          sleep 120
           echo "Application name \"${{ vars.name }}\" and version ${{ cloudbees.version }}"
